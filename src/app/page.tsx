@@ -3,12 +3,11 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "motion/react"
 import { ReactLenis, LenisRef } from 'lenis/react'
-import CanvasExperience from "./components/canvasExperience";
+import CanvasExperience from "./components/CanvasExperience";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Gestion du scroll horizontal quand on scroll verticalement
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
       if (scrollContainerRef.current) {
