@@ -39,13 +39,13 @@ export default function Home() {
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
-  const handleSmoothScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
-    event.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const handleSmoothScroll = (event: React.MouseEvent<HTMLElement, MouseEvent>, sectionId: string) => {
+      event.preventDefault();
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
 
   return (
     <ReactLenis options={{ autoRaf: false }} ref={lenisRef}>
