@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap"); */
+
+:root {
+  --background: rgb(6, 13, 12);
+  --foreground: #171717;
+  --font-kode-mono: "Kode Mono", monospace;
+  /* --font-climate-crisis: "Climate Crisis", sans-serif; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(6, 13, 12);
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-kode-mono);
+  overflow-y: hidden !important;
+}
+
+canvas {
+  height: 335px !important;
+  width: 350px !important;
+}
